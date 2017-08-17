@@ -518,7 +518,8 @@ LOCAL_TEST_PACKAGE :=
 full_android_manifest :=
 non_system_module :=
 
-module_license_metadata :=
+# Include any vendor specific clear_vars.mk file
+-include vendor/*/build/core/clear_vars.mk
 
 # Trim MAKEFILE_LIST so that $(call my-dir) doesn't need to
 # iterate over thousands of entries every time.
